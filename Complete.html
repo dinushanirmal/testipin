@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Complete Page</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#button').click(function () {
+                submitdata();
+            });
+
+            window.onmessage = function(e) {
+                document.getElementById("result").innerHTML = e.data;
+            };
+        });
+
+
+        //attached to onload
+        function submitdata()
+        {
+            window.parent.postMessage(document.getElementById("result").innerText, "*");
+        }
+
+    </script>
+</head>
+<body style="background: darkgreen;height:100%; width:100%;">
+    <div>
+        <h2 style="color: #ffffff; background: darkgreen; text-align: center">Transaction Complete</h2>
+        <h2 style="color: #ffffff; background: darkgreen; text-align: center" id="result"></h2>
+    </div>
+    <div style="text-align: center">
+        <button id="button">Send to parent</button>
+    </div>
+</body>
+</html>
