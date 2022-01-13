@@ -17,6 +17,12 @@
                 var frame_2 = document.getElementById("iframe").contentWindow;
                 frame_2.postMessage(document.getElementById("message").innerText + "123456", '*');
             });
+
+            $('#button3').click(function () {
+                if (!$('#iframe').length) {
+                    $('#iframeHolder').html('<iframe id="iframe" src="Complete2.html" width="700" height="450"></iframe>');
+                }
+            });
         });
 
         window.onmessage = function(e) {
@@ -26,8 +32,9 @@
 </head>
 
 <body>
-    <button id="button">Load iFrame</button>
+    <button id="button">Test Manual</button>
     <button id="button2">Send to iframe</button>
+    <button id="button3">Test on load</button>
     <span id="message"></span>
     <div id="iframeHolder" style="margin: 20px 0;"></div>
 
