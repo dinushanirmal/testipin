@@ -7,25 +7,29 @@
 
     <script type="text/javascript">
         $(function () {
-
             $('#bSubmit').click(function () {
-                if (!$('#iframe').length) {
-                    $('#iframeHolder').html('<iframe id="iframe" src="ipin_mock/Complete.html" width="700" height="450"></iframe>');
-                }
+                //reset fields
+                document.getElementById("message2").innerHTML = "";
+                document.getElementById("message").innerHTML = "";
+
+                //load the PinPad.html page.
+                $('#iframeHolder').html('<iframe id="iframe" src="ipin_mock/PinPad.html" style="border: 2px solid black;" width="700" height="450"></iframe>');
             });
         });
 
         //Listen for messages from iframe
         window.onmessage = function(e) {
-            document.getElementById("message2").innerHTML = "<h4>event received</h4>";
+            document.getElementById("message2").innerHTML = "<h4>event received to parent</h4>";
             document.getElementById("message").innerHTML = "<h2 style='color: red;'>"+ e.data+"</h2>";
         };
     </script>
 </head>
 
-<body>
+<body style="text-align: center">
     <span id="message2"></span>
     <span id="message"></span>
     <div id="iframeHolder" style="margin: 20px 0;"></div>
-    <button id="bSubmit">Submit PIN</button>
+
+    <button id="bSubmit">Load Pin Pad</button>
+    <h4 style="text-align: center" id="msg2">Load the Pin Pad page from this page. This is the parent page that embeds the iPin</h4>
 </body>

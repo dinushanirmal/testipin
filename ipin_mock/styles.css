@@ -1,0 +1,90 @@
+.numpad .item {
+    background-color: #b63019;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    cursor: pointer;
+
+    border-left: 1px none #949494;
+    border-right: 1px solid #949494;
+    border-bottom: 1px solid #949494;
+    border-top: 1px none #949494;
+    width: auto;
+    min-width: 32.8%;
+    float: left;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family:cursive;
+
+}
+
+.numpad .ditem {
+    cursor: default;
+}
+
+body {
+
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+.numpad {
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.numpad .header {
+    text-align: center;
+    background-color: #949494;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.numpad .header .pinblock .pin {
+    border-radius: 100px;
+    background-color: pink;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.numpad .header .pinblock .pintyped {
+    border-radius: 100px;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin : 1px;
+}
+
+.numpad .header .pinblock {
+    margin-top: 10px;
+}
+
+.numpad:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.item:active{
+    color:#FFFFFF;
+    background-color:#000000;
+}
+
+.ditem:active{
+    color:#000000 !important;
+    background-color: pink !important;
+}
+
+.titem:active {
+    color:#FFFFFF !importent;
+    background-color:#000000 !importent;
+    cursor:pointer;
+}

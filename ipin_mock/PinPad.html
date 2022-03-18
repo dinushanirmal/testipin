@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Parent Page</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript">
+        $(function () {
+            $('#bSubmit').click(function () {
+                //Load the complete.html page. This is the page that iPin loads once PIN validation is successful.
+                window.location = 'Complete.html';
+            });
+        });
+    </script>
+</head>
+
+<body style="text-align: center">
+    <h4 style="text-align: center">This is the iPin loaded inside an iFrame</h4>
+
+    <div class="numpad">
+        <div class="header">
+            <div id="pinLabel">Enter PIN</div>
+        </div>
+
+        <div class="item" id="clk1">1</div>
+        <div class="item" id="clk2">2</div>
+        <div class="item" id="clk3">3</div>
+        <div class="item" id="clk4">4</div>
+        <div class="item" id="clk5">5</div>
+        <div class="item" id="clk6">6</div>
+        <div class="item" id="clk7">7</div>
+        <div class="item" id="clk8">8</div>
+        <div class="item" id="clk9">9</div>
+        <div class="item" id="clk0">0</div>
+    </div>
+
+    <h4 style="text-align: center" id="msg2">Press submit to load the complete page</h4>
+    <button id="bSubmit">Submit</button>
+</body>
