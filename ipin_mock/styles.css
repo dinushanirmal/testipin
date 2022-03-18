@@ -82,9 +82,3 @@ body {
     color:#000000 !important;
     background-color: pink !important;
 }
-
-.titem:active {
-    color:#FFFFFF !importent;
-    background-color:#000000 !importent;
-    cursor:pointer;
-}
